@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="../style2.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <section>
+        <div class="portfolio-container">
+            <h1 class="portfolio-title">My Projects</h1>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="screenshot-carousel">
+                        <img src="../Assets/Images/screenshots/AmiiboSiteFrontPage.png" alt="Project Screenshot 1" class="active">
+                        <img src="../Assets/Images/screenshots/AmiiboSiteInfoPage.png" alt="Project Screenshot 2">
+                        <img src="../Assets/Images/screenshots/AmiiboSiteSelfInfo.png" alt="Project Screenshot 3">
+                        <div class="carousel-controls">
+                            <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                            <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Amiibo Site</h3>
+                    <p>Full stack website that allows user to search for Amiibos that Nintendo has released. </p>
+                    <p>Utilizes EJS, CSS, NodeJS, Git, and a public remote Amiibo API.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/rsahyoun/Amiibo-API-Proj" target="_blank" class="github-link">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                        <a href="https://project-demo-link.com" target="_blank" class="demo-link">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get all carousel elements
+        const carousels = document.querySelectorAll('.screenshot-carousel');
+        
+        carousels.forEach(carousel => {
+            const images = carousel.querySelectorAll('img');
+            const prevBtn = carousel.querySelector('.prev-btn');
+            const nextBtn = carousel.querySelector('.next-btn');
+            let currentIndex = 0;
+
+            // Function to update displayed image
+            function updateDisplay() {
+                images.forEach((img, index) => {
+                    if (index === currentIndex) {
+                        img.style.opacity = '1';
+                        img.classList.add('active');
+                    } else {
+                        img.style.opacity = '0';
+                        img.classList.remove('active');
+                    }
+                });
+            }
+
+            // Previous button click handler
+            prevBtn.addEventListener('click', () => {
+                currentIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
+                updateDisplay();
+            });
+
+            // Next button click handler
+            nextBtn.addEventListener('click', () => {
+                currentIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
+                updateDisplay();
+            });
+
+            // Initialize first image
+            updateDisplay();
+        });
+    });
+    </script>
+</body>
+</html> 

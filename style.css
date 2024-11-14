@@ -58,12 +58,35 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 30px;
 }
 
-.Links a{
-    font-family: 'Josefin Sans', sans-serif;
-    color:cornflowerblue;
-    padding-right: 50px;
+.social-link {
+    font-size: 24px;
+    color: #4a4a4a;
+    transition: all 0.3s ease;
+    padding: 10px;
+}
+
+.social-link:hover {
+    color: #2c2c2c;
+    transform: translateY(-3px);
+}
+
+.fa-github:hover {
+    color: #333;
+}
+
+.fa-linkedin:hover {
+    color: #0077b5;
+}
+
+.fa-instagram:hover {
+    color: #e4405f;
+}
+
+.fa-facebook:hover {
+    color: #1877f2;
 }
 
 .copyright{
