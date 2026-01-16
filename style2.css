@@ -8,18 +8,21 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 section{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     background: url("./Assets/Images/night_sky.jpg");
     background-size: cover;
+    background-attachment: fixed;
+    padding: 20px 0;
 }
 
 .info{
@@ -331,5 +334,140 @@ span:nth-child(9){
     font-size: 2rem;
     margin-bottom: 10px;
     color: #fff;
+}
+
+/* Responsive Design - Media Queries */
+
+/* Large screens (default styling above) */
+
+/* Medium screens - Tablets (768px and below) */
+@media screen and (max-width: 768px) {
+    .portfolio-container {
+        padding: 15px;
+    }
+
+    .portfolio-title {
+        font-size: 1.75rem;
+        margin-bottom: 25px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .project-card {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .screenshot-carousel {
+        height: 300px;
+    }
+
+    .project-title {
+        font-size: 1.5rem;
+    }
+
+    .carousel-controls button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .carousel-controls i {
+        font-size: 18px;
+    }
+
+    .carousel-controls {
+        padding: 0 10px;
+    }
+
+    .project-card p {
+        font-size: 0.95rem;
+    }
+
+    .project-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .project-links a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Small screens - Mobile phones (480px and below) */
+@media screen and (max-width: 480px) {
+    .portfolio-container {
+        padding: 10px;
+    }
+
+    .portfolio-title {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .projects-grid {
+        padding: 5px;
+        gap: 15px;
+    }
+
+    .project-card {
+        padding: 12px;
+        margin-bottom: 15px;
+    }
+
+    .screenshot-carousel {
+        height: 200px;
+    }
+
+    .project-title {
+        font-size: 1.25rem;
+    }
+
+    .carousel-controls button {
+        width: 35px;
+        height: 35px;
+    }
+
+    .carousel-controls i {
+        font-size: 16px;
+    }
+
+    .carousel-controls {
+        padding: 0 5px;
+    }
+
+    .project-card p {
+        font-size: 0.85rem;
+        padding: 8px;
+    }
+
+    .project-links a {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Extra small screens (360px and below) */
+@media screen and (max-width: 360px) {
+    .portfolio-title {
+        font-size: 1.25rem;
+    }
+
+    .project-title {
+        font-size: 1.1rem;
+    }
+
+    .screenshot-carousel {
+        height: 180px;
+    }
+
+    .project-card p {
+        font-size: 0.8rem;
+    }
 }
 
