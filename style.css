@@ -6,8 +6,8 @@
 
 #middle-container {
     position: relative;
-    padding-top: 200px;
-    padding-bottom: 100px;
+    padding-top: 80px;
+    padding-bottom: 60px;
     background-color: #DAC0A3;
 }
 
@@ -15,19 +15,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 #personal_photo {
     height: 300px;
-    border-radius: 50%
-  }
+    border-radius: 50%;
+}
 
 .super-powers h2 {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    font-size: 32px;
+    font-size: 42px;
     color: seagreen;
+    margin-top: 40px;
+    margin-bottom: 30px;
 }
 
 .dog-coder{
@@ -36,12 +42,31 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    padding-top: 100px;
+    padding-top: 40px;
+    margin-left: 5%;
+}
+
+.dog-coder img {
+    height: 180px;
 }
 
 .description{
-    padding-top: 150px;
+    padding-top: 80px;
     clear: both;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.description h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.description p {
+    font-size: 1.15rem;
+    line-height: 1.8;
 }
 
 .space{
@@ -50,7 +75,12 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    padding-top: 100px;
+    padding-top: 40px;
+    margin-left: 5%;
+}
+
+.space img {
+    height: 180px;
 }
 
 .Links{
@@ -94,6 +124,18 @@
     position: relative;
     top: 75px;
     left: 100px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
   .wrapper {
@@ -241,10 +283,13 @@
         font-size: 18px;
     }
     
+    #middle-container {
+        padding-top: 60px;
+    }
+    
     .lead {
-        font-size: 1rem;
+        font-size: 1.2rem;
         padding: 0 20px;
-        text-align: center;
     }
     
     #personal_photo {
@@ -254,19 +299,24 @@
     }
     
     .super-powers h2 {
-        font-size: 28px;
+        font-size: 36px;
+    }
+    
+    .description h3 {
+        font-size: 1.5rem;
+    }
+    
+    .description p {
+        font-size: 1.05rem;
     }
     
     .dog-coder img, 
     .space img {
-        height: 120px !important;
-        width: auto !important;
+        height: 140px !important;
     }
     
     .description {
-        padding-top: 80px;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-top: 60px;
     }
 }
 
@@ -289,12 +339,12 @@
     }
     
     #middle-container {
-        padding-top: 100px;
+        padding-top: 60px;
         padding-bottom: 50px;
     }
     
     .lead {
-        font-size: 0.95rem;
+        font-size: 1.1rem;
         padding: 0 15px;
     }
     
@@ -309,23 +359,24 @@
     }
     
     .super-powers h2 {
-        font-size: 26px;
+        font-size: 32px;
         padding: 0 15px;
+        margin-top: 30px;
     }
     
     .description {
-        padding-top: 60px;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-top: 50px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
     
     .description h3 {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         text-align: center;
     }
     
     .description p {
-        font-size: 0.95rem;
+        font-size: 1rem;
         text-align: justify;
     }
     
@@ -335,16 +386,17 @@
         float: none;
         display: flex;
         justify-content: center;
-        padding-top: 50px;
+        padding-top: 30px;
         flex-wrap: wrap;
+        margin-left: 0;
     }
     
     .dog-coder img {
-        height: 100px !important;
+        height: 120px !important;
     }
     
     .space img {
-        height: 100px !important;
+        height: 120px !important;
         width: auto !important;
         padding-right: 10px !important;
         margin: 10px;
@@ -406,14 +458,13 @@
     }
     
     #middle-container {
-        padding-top: 80px;
+        padding-top: 50px;
         padding-bottom: 40px;
     }
     
     .lead {
-        font-size: 0.85rem;
+        font-size: 0.95rem;
         padding: 0 10px;
-        text-align: center;
     }
     
     #personal_photo {
@@ -423,33 +474,34 @@
     }
     
     .super-powers h2 {
-        font-size: 22px;
+        font-size: 26px;
         padding: 0 10px;
+        margin-top: 20px;
     }
     
     .description {
-        padding-top: 45px;
+        padding-top: 40px;
         padding-left: 15px;
         padding-right: 15px;
     }
     
     .description h3 {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         text-align: center;
     }
     
     .description p {
-        font-size: 0.85rem;
+        font-size: 0.95rem;
         text-align: justify;
-        line-height: 1.5;
+        line-height: 1.6;
     }
     
     .dog-coder img {
-        height: 80px !important;
+        height: 100px !important;
     }
     
     .space img {
-        height: 80px !important;
+        height: 100px !important;
         width: auto !important;
         padding-right: 5px !important;
         margin: 5px;
