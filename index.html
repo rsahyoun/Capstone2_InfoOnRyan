@@ -49,24 +49,23 @@
         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
             <div class="overflow-hidden" style="max-height: 30vh;"> 
                 <div class="container" id="personal_photo">
-                  <img src="./Assets/Images/Ryan_Website_photo.png" style="border-radius: 50%;" alt="Picture of Ryan outside">
+                  <img src="./Assets/Images/Ryan_Website_photo.png" style="border-radius: 50%; width: 100%; height: 100%; object-fit: cover;" alt="Picture of Ryan outside">
                 </div>
             </div>
         </div>
 
         <div class="super-powers">
-        <h2 style="font-family: 'Cinzel', serif;">My Super Powers</h2>
+        <h2 style="font-family: 'Cinzel', serif;">My Passions</h2>
         
         <div class="body">
             <div class="dog-coder">
                 <img src="./Assets/Images/dog_coding.png" height="150" alt="dog with glasses coding on computer"/> 
             </div>
             <div class="description">
-                <h3 style="font-family: 'Libre Baskerville', serif;">Coding and Curiosity</h3>
-                <p style="font-family: 'Josefin Sans', sans-serif;"> I have always loved computers. I started coding in my senior year of high school, where I took a Java and Unity coding
-                    course. Those high school classes inspired me to go further into the field and learn more in college. I then took two C++ classes during my first
-                    year in college and started to self-teach myself JavaScript. I am currently teaching myself how to be a full-stack developer and hope to use these 
-                    skills to land an internship or a job soon. 
+                <h3 style="font-family: 'Libre Baskerville', serif;">Full-Stack Development</h3>
+                <p style="font-family: 'Josefin Sans', sans-serif;">
+                    I'm passionate about building web applications and interactive experiences. From Java and Unity in high school to 
+                    C++ in college, I'm now teaching myself full-stack development with JavaScript, Node.js, and modern frameworks.
                 </p>
             </div>
             <div class="space">
@@ -75,18 +74,22 @@
             </div>  
             <div class="description">
                 <h3 style="font-family: 'Libre Baskerville', serif;">Space and Music</h3>
-                <p style="font-family: 'Josefin Sans', sans-serif;"> I have a real knack for music, even if I never realized it at first. I first started with piano when I was
-                    7 years old. I then joined my middle school's band with the baritone saxophone and loved it so much that I continued it in high school. I am currently practicing guitar in my 
-                    free time and hope to improve more. Space is another subject that fascinates me, and even though I know only some fun facts, I would love to get more motivation to learn about it more. 
+                <p style="font-family: 'Josefin Sans', sans-serif;">
+                    I have a real knack for music, even if I never realized it at first. I first started with piano when I was
+                    7 years old. I then joined my middle school's band with the baritone saxophone and loved it so much that I continued it in high school. 
+                    I am currently practicing guitar in my free time and hope to improve more. Space is another subject that fascinates me, and even though 
+                    I know only some fun facts, I would love to get more motivation to learn about it more.
                 </p>
             </div>
         </div>
 
-        <div class="Contact-Info">
-            <h2 style="font-family: 'Cinzel', serif; padding-top: 200px;"> Eager to Make New Friends</h2>
-            <h3 style="font-family: 'Libre Baskerville', serif; padding-top: 50px;">If you love Coding, Space, or Music, get in contact with me so we can make cool projects!</h3>
-            <a class="btn btn-success" style="font-family: 'Cinzel', serif;" href="./Pages/Contact.html" role="button">Contact Me</a>
-            <a class="btn btn-success" style="font-family: 'Cinzel', serif;" href="./Pages/portfolio.html" role="button">View My Work</a>
+        <div style="text-align: center; padding-top: 150px; padding-bottom: 50px;">
+            <h2 style="font-family: 'Cinzel', serif; color: seagreen;">Let's Connect</h2>
+            <p style="font-family: 'Josefin Sans', sans-serif; padding: 20px; font-size: 1.1rem;">
+                Check out my work or get in touch!
+            </p>
+            <a class="btn btn-success" style="font-family: 'Cinzel', serif; margin: 10px;" href="./Pages/portfolio.html" role="button">View My Work</a>
+            <a class="btn btn-success" style="font-family: 'Cinzel', serif; margin: 10px;" href="./Pages/Contact.html" role="button">Contact Me</a>
         </div>
             
     </section>
@@ -100,20 +103,5 @@
             <p class="copyright">© Ryan Sahyoun @ Gameitup.</p>
         </div>
     </section>
-
-    <script>
-    // #region agent log
-    window.addEventListener('DOMContentLoaded', () => {
-        const imgs = document.querySelectorAll('img[height]');
-        imgs.forEach((img, idx) => {
-            const heightAttr = img.getAttribute('height');
-            const widthAttr = img.getAttribute('width');
-            const computedStyle = window.getComputedStyle(img);
-            fetch('http://127.0.0.1:7242/ingest/54b0aedf-9789-42f1-bd63-62793eff4393',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'index.html:script:1',message:'Image attributes check',data:{idx:idx,src:img.src,heightAttr:heightAttr,widthAttr:widthAttr,computedHeight:computedStyle.height,computedWidth:computedStyle.width,hasPxInHeight:heightAttr?.includes('px'),hasPxInWidth:widthAttr?.includes('px')},timestamp:Date.now(),sessionId:'debug-session',runId:'pre-fix',hypothesisId:'A,B,D,E'})}).catch(()=>{});
-        });
-    });
-    // #endregion
-    </script>
-
 </body>
 </html>
